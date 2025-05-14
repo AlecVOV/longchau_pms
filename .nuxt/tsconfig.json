@@ -102,7 +102,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev.json"
+        "./manifest/meta/18e844e4-685d-4842-8f2f-af6c93db4de5.json"
       ],
       "#components": [
         "./components"
@@ -166,7 +166,6 @@
     "../dist",
     "../.data",
     "../node_modules",
-    "../../../../node_modules",
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxtjs/tailwindcss/node_modules",
     "../node_modules/nuxt-icon/node_modules",
