@@ -1,257 +1,442 @@
 <template>
-  <div>
-    <!-- Contact Hero -->
-    <section class="relative pt-40 pb-20 text-white">
-      <!-- Background Image with Overlay -->
-      <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-black/60 z-10"></div>
-        <img 
-          src="https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg" 
-          alt="Contact background" 
-          class="absolute inset-0 w-full h-full object-cover object-center"
-        />
-      </div>
-      
-      <!-- Content -->
-      <div class="container-custom relative z-20">
-        <div class="max-w-3xl mx-auto text-center">
-          <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6 animate-slide-up">Contact Us</h1>
-          <p class="text-xl text-gray-200 mb-8 animate-slide-up animation-delay-200">
-            We'd love to hear from you. Reach out for reservations, inquiries, or feedback.
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Contact Info and Form -->
-    <section class="py-20 bg-cream">
-      <div class="container-custom">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <!-- Contact Information -->
-          <div class="lg:col-span-1 bg-white rounded-lg shadow-lg p-8">
-            <h2 class="font-serif text-3xl font-bold mb-6 text-primary-600">Get In Touch</h2>
-            
-            <div class="space-y-6">
-              <div class="flex items-start">
-                <div class="bg-primary-600 rounded-full p-3 mr-4">
-                  <Icon name="heroicons:map-pin" class="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 class="font-bold text-lg mb-1">Our Location</h4>
-                  <p class="text-gray-700">123 Culinary St<br/>Foodie City, FC 12345</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="bg-primary-600 rounded-full p-3 mr-4">
-                  <Icon name="heroicons:phone" class="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 class="font-bold text-lg mb-1">Phone</h4>
-                  <p class="text-gray-700">(555) 123-4567</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="bg-primary-600 rounded-full p-3 mr-4">
-                  <Icon name="heroicons:envelope" class="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 class="font-bold text-lg mb-1">Email</h4>
-                  <p class="text-gray-700">info@gourmetrestaurant.com</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="bg-primary-600 rounded-full p-3 mr-4">
-                  <Icon name="heroicons:clock" class="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 class="font-bold text-lg mb-1">Hours</h4>
-                  <p class="text-gray-700">Monday - Thursday: 11am - 10pm<br/>
-                  Friday - Saturday: 11am - 11pm<br/>
-                  Sunday: 10am - 9pm</p>
-                </div>
-              </div>
+  <div class="py-8 md:py-12">
+    <div class="container-custom">
+      <!-- Breadcrumb -->
+      <nav class="flex mb-6 text-sm" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li class="inline-flex items-center">
+            <NuxtLink to="/" class="text-neutral-500 hover:text-primary-600">Home</NuxtLink>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <span class="mx-2 text-neutral-400">/</span>
+              <span class="text-neutral-700">Contact Us</span>
             </div>
-            
-            <div class="mt-8">
-              <h4 class="font-bold text-lg mb-3">Follow Us</h4>
-              <div class="flex space-x-4">
-                <a href="#" class="bg-primary-600 text-white hover:bg-primary-700 rounded-full p-3 transition-colors duration-300">
-                  <Icon name="mdi:facebook" class="w-5 h-5" />
-                </a>
-                <a href="#" class="bg-primary-600 text-white hover:bg-primary-700 rounded-full p-3 transition-colors duration-300">
-                  <Icon name="mdi:instagram" class="w-5 h-5" />
-                </a>
-                <a href="#" class="bg-primary-600 text-white hover:bg-primary-700 rounded-full p-3 transition-colors duration-300">
-                  <Icon name="mdi:twitter" class="w-5 h-5" />
-                </a>
-                <a href="#" class="bg-primary-600 text-white hover:bg-primary-700 rounded-full p-3 transition-colors duration-300">
-                  <Icon name="mdi:yelp" class="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Contact Form -->
-          <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-8">
-            <h2 class="font-serif text-3xl font-bold mb-6 text-primary-600">Send Us a Message</h2>
-            
-            <form class="space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label for="name" class="block mb-2 font-medium">Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label for="email" class="block mb-2 font-medium">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500"
-                    placeholder="Your email address"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label for="subject" class="block mb-2 font-medium">Subject</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500"
-                  placeholder="Subject of your message"
-                />
-              </div>
-              
-              <div>
-                <label for="message" class="block mb-2 font-medium">Message</label>
-                <textarea 
-                  id="message" 
-                  rows="6"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500"
-                  placeholder="Your message"
-                ></textarea>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="flex items-center h-5">
-                  <input 
-                    id="privacy" 
-                    type="checkbox" 
-                    class="w-4 h-4 accent-secondary-500"
-                  />
-                </div>
-                <label for="privacy" class="ml-3 text-sm text-gray-600">
-                  I agree to the privacy policy and consent to having my data processed to be contacted.
-                </label>
-              </div>
-              
-              <button 
-                type="submit" 
-                class="btn btn-primary w-full md:w-auto"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Map Section -->
-    <section class="h-[500px] w-full relative">
-      <!-- Placeholder for Google Maps embed -->
-      <div class="absolute inset-0 bg-gray-300 flex items-center justify-center">
-        <p class="text-gray-700 text-center px-4">
-          Google Maps would be embedded here with your restaurant's exact location.<br>
-          For implementation, you would need to add your Google Maps API key.
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Contact Us</h1>
+        <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+          We're here to help! Get in touch with our team for any questions about medications, prescriptions, or our services.
         </p>
       </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section class="py-20 bg-white">
-      <div class="container-custom">
-        <div class="text-center mb-16">
-          <h2 class="font-serif text-4xl font-bold mb-6 text-primary-600">Frequently Asked Questions</h2>
-          <div class="w-24 h-1 bg-secondary-500 mx-auto mb-8"></div>
-          <p class="text-gray-700 max-w-3xl mx-auto">
-            Here are answers to some common questions about our restaurant and services.
-          </p>
+
+      <!-- Quick Contact Options -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
+          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="i-iconify-ph-phone-fill text-2xl text-primary-600"></span>
+          </div>
+          <h3 class="text-lg font-semibold text-neutral-900 mb-2">Call Us</h3>
+          <p class="text-neutral-600 mb-3">Speak directly with our pharmacy team</p>
+          <a href="tel:+84287302345" class="text-primary-600 hover:text-primary-700 font-medium">
+            (028) 73023456
+          </a>
+          <p class="text-sm text-neutral-500 mt-2">Mon-Fri: 8AM-8PM<br>Sat-Sun: 9AM-6PM</p>
         </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="i-iconify-ph-envelope-fill text-2xl text-green-600"></span>
+          </div>
+          <h3 class="text-lg font-semibold text-neutral-900 mb-2">Email Us</h3>
+          <p class="text-neutral-600 mb-3">Send us a message anytime</p>
+          <a href="mailto:sale@nhathuoclongchau.com.vn" class="text-primary-600 hover:text-primary-700 font-medium">
+            sale@nhathuoclongchau.com.vn
+          </a>
+          <p class="text-sm text-neutral-500 mt-2">We respond within 24 hours</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="i-iconify-ph-chat-circle-fill text-2xl text-blue-600"></span>
+          </div>
+          <h3 class="text-lg font-semibold text-neutral-900 mb-2">Live Chat</h3>
+          <p class="text-neutral-600 mb-3">Chat with our support team</p>
+          <button @click="openLiveChat" class="text-primary-600 hover:text-primary-700 font-medium">
+            Start Live Chat
+          </button>
+          <p class="text-sm text-neutral-500 mt-2">Available 24/7</p>
+        </div>
+      </div>      <!-- Send Us a Message Section -->
+      <div class="bg-white rounded-lg shadow-sm p-8 mb-12">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6">Send Us a Message</h2>
         
-        <div class="max-w-3xl mx-auto">
-          <div v-for="(faq, index) in faqs" :key="index" class="mb-4">
-            <button
-              class="w-full bg-gray-50 px-6 py-4 rounded-lg font-medium text-left flex justify-between items-center"
-              @click="toggleFaq(index)"
+        <form @submit.prevent="submitForm" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="firstName" class="block text-sm font-medium text-neutral-700 mb-2">
+                First Name <span class="text-red-500">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="firstName" 
+                v-model="form.firstName" 
+                class="input"
+                :class="{'border-red-500': errors.firstName}"
+                required
+              >
+              <p v-if="errors.firstName" class="text-red-500 text-sm mt-1">{{ errors.firstName }}</p>
+            </div>
+            
+            <div>
+              <label for="lastName" class="block text-sm font-medium text-neutral-700 mb-2">
+                Last Name <span class="text-red-500">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="lastName" 
+                v-model="form.lastName" 
+                class="input"
+                :class="{'border-red-500': errors.lastName}"
+                required
+              >
+              <p v-if="errors.lastName" class="text-red-500 text-sm mt-1">{{ errors.lastName }}</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="email" class="block text-sm font-medium text-neutral-700 mb-2">
+                Email Address <span class="text-red-500">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                v-model="form.email" 
+                class="input"
+                :class="{'border-red-500': errors.email}"
+                required
+              >
+              <p v-if="errors.email" class="text-red-500 text-sm mt-1">{{ errors.email }}</p>
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-neutral-700 mb-2">
+                Phone Number
+              </label>
+              <input 
+                type="tel" 
+                id="phone" 
+                v-model="form.phone" 
+                class="input"
+                placeholder="(555) 123-4567"
+              >
+            </div>
+          </div>
+
+          <div>
+            <label for="subject" class="block text-sm font-medium text-neutral-700 mb-2">
+              Subject <span class="text-red-500">*</span>
+            </label>
+            <select 
+              id="subject" 
+              v-model="form.subject" 
+              class="input"
+              :class="{'border-red-500': errors.subject}"
+              required
             >
-              <span>{{ faq.question }}</span>
-              <Icon 
-                :name="faq.open ? 'heroicons:minus-circle' : 'heroicons:plus-circle'" 
-                class="w-6 h-6 text-primary-600"
-              />
+              <option value="">Select a subject</option>
+              <option value="prescription">Prescription Questions</option>
+              <option value="order">Order Support</option>
+              <option value="billing">Billing Inquiry</option>
+              <option value="technical">Technical Support</option>
+              <option value="consultation">Consultation Booking</option>
+              <option value="complaint">Complaint or Feedback</option>
+              <option value="other">Other</option>
+            </select>
+            <p v-if="errors.subject" class="text-red-500 text-sm mt-1">{{ errors.subject }}</p>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-neutral-700 mb-2">
+              Message <span class="text-red-500">*</span>
+            </label>
+            <textarea 
+              id="message" 
+              v-model="form.message" 
+              rows="5" 
+              class="input"
+              :class="{'border-red-500': errors.message}"
+              placeholder="Please provide details about your inquiry..."
+              required
+            ></textarea>
+            <p v-if="errors.message" class="text-red-500 text-sm mt-1">{{ errors.message }}</p>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input 
+                id="privacy" 
+                type="checkbox" 
+                v-model="form.privacyAccepted"
+                class="rounded text-primary-600 focus:ring-primary-500 h-4 w-4"
+                :class="{'border-red-500': errors.privacyAccepted}"
+                required
+              >
+            </div>
+            <div class="ml-3">
+              <label for="privacy" class="text-sm text-neutral-600">
+                I agree to the 
+                <NuxtLink to="/privacy-policy" class="text-primary-600 hover:text-primary-700">Privacy Policy</NuxtLink>
+                and consent to Long Châu processing my personal information.
+                <span class="text-red-500">*</span>
+              </label>
+              <p v-if="errors.privacyAccepted" class="text-red-500 text-xs mt-1">{{ errors.privacyAccepted }}</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <button 
+              type="button" 
+              @click="resetForm"
+              class="btn-outline"
+            >
+              Reset Form
             </button>
-            <div 
-              v-show="faq.open"
-              class="bg-white px-6 py-4 rounded-lg border-t-0 border border-gray-100"
+            <button 
+              type="submit" 
+              class="btn-primary"
+              :disabled="isSubmitting"
+              :class="{'opacity-50 cursor-not-allowed': isSubmitting}"
             >
-              <p class="text-gray-700">{{ faq.answer }}</p>
+              <span v-if="isSubmitting" class="i-iconify-ph-spinner animate-spin mr-2"></span>
+              {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Contact Information Section -->
+      <div class="bg-white rounded-lg shadow-sm p-8 mb-12">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6">Contact Information</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex items-start">
+            <span class="i-iconify-ph-map-pin-fill text-xl text-primary-600 mr-3 mt-1"></span>
+            <div>
+              <h3 class="font-semibold text-neutral-900">Main Office</h3>
+              <p class="text-neutral-600">
+                379-381 Hai Bà Trưng<br>
+                P. Xuân Hoà<br>
+                TP. Hồ Chí Minh
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="i-iconify-ph-clock-fill text-xl text-primary-600 mr-3 mt-1"></span>
+            <div>
+              <h3 class="font-semibold text-neutral-900">Business Hours</h3>
+              <div class="text-neutral-600">
+                <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
+                <p>Saturday: 9:00 AM - 6:00 PM</p>
+                <p>Sunday: 10:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="i-iconify-ph-shield-check-fill text-xl text-primary-600 mr-3 mt-1"></span>
+            <div>
+              <h3 class="font-semibold text-neutral-900">Emergency</h3>
+              <p class="text-neutral-600">
+                For medical emergencies, please call 113<br>
+                For urgent prescription questions: 
+                <a href="tel:+18005551234" class="text-primary-600 hover:text-primary-700">(028) 73023456</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Quick Links Section -->
+      <div class="bg-white rounded-lg shadow-sm p-8 mb-12">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6">Quick Links</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <NuxtLink to="/upload-prescription" class="flex items-center p-4 rounded-lg hover:bg-neutral-50 transition-colors group border border-neutral-200">
+            <span class="i-iconify-ph-upload-simple text-2xl text-primary-600 mr-3"></span>
+            <div>
+              <h3 class="font-medium text-neutral-900 group-hover:text-primary-600">Upload Prescription</h3>
+              <p class="text-xs text-neutral-600">Start your medication order</p>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink to="/book-consultation" class="flex items-center p-4 rounded-lg hover:bg-neutral-50 transition-colors group border border-neutral-200">
+            <span class="i-iconify-ph-video-camera text-2xl text-primary-600 mr-3"></span>
+            <div>
+              <h3 class="font-medium text-neutral-900 group-hover:text-primary-600">Book Consultation</h3>
+              <p class="text-xs text-neutral-600">Speak with our pharmacists</p>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink to="/health-assessment" class="flex items-center p-4 rounded-lg hover:bg-neutral-50 transition-colors group border border-neutral-200">
+            <span class="i-iconify-ph-clipboard-text text-2xl text-primary-600 mr-3"></span>
+            <div>
+              <h3 class="font-medium text-neutral-900 group-hover:text-primary-600">Health Assessment</h3>
+              <p class="text-xs text-neutral-600">Take our health quiz</p>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink to="/account/prescriptions" class="flex items-center p-4 rounded-lg hover:bg-neutral-50 transition-colors group border border-neutral-200">
+            <span class="i-iconify-ph-file-text text-2xl text-primary-600 mr-3"></span>
+            <div>
+              <h3 class="font-medium text-neutral-900 group-hover:text-primary-600">My Prescriptions</h3>
+              <p class="text-xs text-neutral-600">Manage your prescriptions</p>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
+
+      <!-- Frequently Asked Questions Section -->
+      <div class="bg-white rounded-lg shadow-sm p-8">
+        <h2 class="text-2xl font-bold text-neutral-900 mb-6">Frequently Asked Questions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div class="border-b border-neutral-200 pb-4">
+              <h3 class="font-semibold text-neutral-900 mb-2">How do I upload my prescription?</h3>
+              <p class="text-sm text-neutral-600">
+                You can upload your prescription by clicking the "Upload Prescription" button or visiting our upload page. Simply take a clear photo or scan of your prescription.
+              </p>
+            </div>
+
+            <div class="border-b border-neutral-200 pb-4">
+              <h3 class="font-semibold text-neutral-900 mb-2">How long does prescription processing take?</h3>
+              <p class="text-sm text-neutral-600">
+                Most prescriptions are processed within 2-4 hours during business hours. We'll contact you once your prescription is ready.
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="border-b border-neutral-200 pb-4">
+              <h3 class="font-semibold text-neutral-900 mb-2">Do you offer delivery services?</h3>
+              <p class="text-sm text-neutral-600">
+                Yes! We offer free delivery on orders over $50. Same-day delivery is available in select areas.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-neutral-900 mb-2">Can I book a consultation online?</h3>
+              <p class="text-sm text-neutral-600">
+                Absolutely! You can book a consultation with our licensed pharmacists online or by calling our support number.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, reactive } from 'vue'
 
-// FAQs
-const faqs = ref([
-  {
-    question: "Do I need to make a reservation?",
-    answer: "While walk-ins are welcome, we highly recommend making a reservation, especially for weekend dining. You can book a table online through our reservations page or by calling us directly.",
-    open: true
-  },
-  {
-    question: "Is there a dress code?",
-    answer: "We recommend smart casual attire. While there is no strict dress code, we do ask that guests refrain from wearing athletic wear, beachwear, or flip flops.",
-    open: false
-  },
-  {
-    question: "Do you accommodate dietary restrictions?",
-    answer: "Yes, our chefs are happy to accommodate most dietary restrictions and allergies. Please inform your server or note your needs when making your reservation so we can prepare accordingly.",
-    open: false
-  },
-  {
-    question: "Do you offer private dining?",
-    answer: "Yes, we have a private dining room that can accommodate groups of up to 20 people. For larger events, please inquire about our catering services or full restaurant buyouts.",
-    open: false
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, debit cards, and cash. For large parties or private events, we may require a deposit or prepayment.",
-    open: false
+// Form state
+const form = reactive({
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: '',
+  privacyAccepted: false
+})
+
+const errors = reactive({})
+const isSubmitting = ref(false)
+
+// Methods
+const validateForm = () => {
+  // Clear previous errors
+  Object.keys(errors).forEach(key => delete errors[key])
+
+  // Validate required fields
+  if (!form.firstName.trim()) {
+    errors.firstName = 'First name is required'
   }
-]);
 
-// Toggle FAQ
-const toggleFaq = (index) => {
-  faqs.value[index].open = !faqs.value[index].open;
-};
-</script>
+  if (!form.lastName.trim()) {
+    errors.lastName = 'Last name is required'
+  }
 
-<style scoped>
-.animation-delay-200 {
-  animation-delay: 0.2s;
+  if (!form.email.trim()) {
+    errors.email = 'Email is required'
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+    errors.email = 'Please enter a valid email address'
+  }
+
+  if (!form.subject) {
+    errors.subject = 'Please select a subject'
+  }
+
+  if (!form.message.trim()) {
+    errors.message = 'Message is required'
+  } else if (form.message.trim().length < 10) {
+    errors.message = 'Message must be at least 10 characters long'
+  }
+
+  if (!form.privacyAccepted) {
+    errors.privacyAccepted = 'You must agree to the privacy policy'
+  }
+
+  return Object.keys(errors).length === 0
 }
-</style>
+
+const submitForm = async () => {
+  if (!validateForm()) {
+    return
+  }
+
+  isSubmitting.value = true
+
+  try {
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    
+    // In a real app, you would send the form data to your backend
+    console.log('Form submitted:', form)
+    
+    // Show success message
+    alert('Thank you for your message! We will get back to you within 24 hours.')
+    
+    // Reset form
+    resetForm()
+  } catch (error) {
+    console.error('Error submitting form:', error)
+    alert('There was an error sending your message. Please try again.')
+  } finally {
+    isSubmitting.value = false
+  }
+}
+
+const resetForm = () => {
+  Object.keys(form).forEach(key => {
+    if (typeof form[key] === 'boolean') {
+      form[key] = false
+    } else {
+      form[key] = ''
+    }
+  })
+  Object.keys(errors).forEach(key => delete errors[key])
+}
+
+const openLiveChat = () => {
+  // In a real app, this would open a live chat widget
+  alert('Live chat feature would be implemented here. For now, please use the contact form or call us directly.')
+}
+
+// Meta
+useHead({
+  title: 'Contact Us - Long Châu Pharmacy',
+  meta: [
+    {
+      name: 'description',
+      content: 'Contact Long Châu Pharmacy for prescription questions, order support, and consultation booking. Available 24/7 to help with your healthcare needs.'
+    }
+  ]
+})
+</script>

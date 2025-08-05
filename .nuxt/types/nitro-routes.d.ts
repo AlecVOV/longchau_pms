@@ -3,11 +3,83 @@ import type { Serialize, Simplify } from "nitropack/types";
 declare module "nitropack/types" {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
+    '/api/admin/orders': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/admin/orders.get').default>>>>
+    }
+    '/api/admin/orders/:id': {
+      'patch': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/admin/orders/[id].patch').default>>>>
+    }
+    '/api/admin/users': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/admin/users/index.post').default>>>>
+    }
+    '/api/auth/login': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/auth/login.post').default>>>>
+    }
+    '/api/auth/logout': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/auth/logout.post').default>>>>
+    }
+    '/api/auth/me': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/auth/me.get').default>>>>
+    }
+    '/api/auth/profile': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/auth/profile').default>>>>
+    }
+    '/api/auth/refresh': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/auth/refresh.post').default>>>>
+    }
+    '/api/auth/register': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/auth/register.post').default>>>>
+    }
+    '/api/categories/:id/products': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/categories/[id]/products.get').default>>>>
+    }
+    '/api/categories': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/categories/index.get').default>>>>
+    }
+    '/api/debug/add-sample-reminders': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/debug/add-sample-reminders.post').default>>>>
+    }
+    '/api/debug/reminders': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/debug/reminders.get').default>>>>
+    }
+    '/api/medication-reminders/:id': {
+      'delete': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/medication-reminders/[id].delete').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/medication-reminders/[id]').default>>>>
+    }
+    '/api/medication-reminders': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/medication-reminders/index.get').default>>>>
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/medication-reminders/index.post').default>>>>
+    }
+    '/api/orders/:id': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/orders/[id].get').default>>>>
+    }
+    '/api/orders': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/orders/index.get').default>>>>
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/orders/index.post').default>>>>
+    }
+    '/api/prescriptions': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/prescriptions/index.get').default>>>>
+    }
+    '/api/products/:id': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/products/[id].get').default>>>>
+    }
+    '/api/products/:id/inventory': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/products/[id]/inventory').default>>>>
+    }
+    '/api/products': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/products/index.get').default>>>>
+    }
+    '/api/products/search': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/products/search.get').default>>>>
+    }
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/handlers/renderer').default>>>>
     }
     '/__nuxt_island/**': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/#internal/nuxt/island-renderer').default>>>>
+    }
+    '/_ipx/**': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/image/dist/runtime/ipx').default>>>>
     }
   }
 }

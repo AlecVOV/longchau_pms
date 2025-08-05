@@ -1,0 +1,39 @@
+{
+  "name": "pharmacy-website-tests",
+  "version": "1.0.0",
+  "description": "Comprehensive test suite for Pharmacy Website functionality and bug validation",
+  "main": "run-all-tests.js",
+  "scripts": {
+    "test": "node run-all-tests.js",
+    "test:list": "node run-all-tests.js --list",
+    "test:comprehensive": "node final-comprehensive-test.js",
+    "test:zero-quantity": "node test-zero-quantity.js",
+    "test:debug-order": "node debug-order-test.js",
+    "setup:admin": "node create-admin.js",
+    "setup:products": "node get-products.js",
+    "test:quick": "node create-admin.js && node final-comprehensive-test.js"
+  },
+  "keywords": [
+    "pharmacy",
+    "testing",
+    "validation",
+    "bug-fixes",
+    "e2e",
+    "api-testing"
+  ],
+  "author": "GitHub Copilot",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "bugs": {
+    "url": "https://github.com/issues"
+  },
+  "homepage": "README.md"
+}

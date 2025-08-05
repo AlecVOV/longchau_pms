@@ -58,6 +58,12 @@
       "@vue/compiler-sfc": [
         "../node_modules/@vue/compiler-sfc"
       ],
+      "vue-router": [
+        "../node_modules/vue-router"
+      ],
+      "vue-router/auto-routes": [
+        "../node_modules/vue-router/vue-router-auto-routes"
+      ],
       "unplugin-vue-router/client": [
         "../node_modules/unplugin-vue-router/client"
       ],
@@ -82,6 +88,9 @@
       "public": [
         "../public"
       ],
+      "public/*": [
+        "../public/*"
+      ],
       "#build": [
         "./"
       ],
@@ -93,6 +102,15 @@
       ],
       "pinia": [
         "../node_modules/pinia/dist/pinia"
+      ],
+      "#image": [
+        "../node_modules/@nuxt/image/dist/runtime"
+      ],
+      "#image/*": [
+        "../node_modules/@nuxt/image/dist/runtime/*"
+      ],
+      "#color-mode-options": [
+        "./color-mode-options.mjs"
       ],
       "#unhead/composables": [
         "../node_modules/nuxt/dist/head/runtime/composables/v3"
@@ -107,11 +125,10 @@
   "include": [
     "./types/nitro-nuxt.d.ts",
     "../node_modules/@nuxtjs/tailwindcss/runtime/server",
-    "../node_modules/nuxt-icon/runtime/server",
-    "../node_modules/@nuxtjs/google-fonts/runtime/server",
-    "../node_modules/@vueuse/nuxt/runtime/server",
     "../node_modules/@pinia/nuxt/runtime/server",
-    "../node_modules/@nuxt/devtools/runtime/server",
+    "../node_modules/@vueuse/nuxt/runtime/server",
+    "../node_modules/@nuxt/image/runtime/server",
+    "../node_modules/@nuxtjs/color-mode/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
     "../**/*",
@@ -119,13 +136,13 @@
   ],
   "exclude": [
     "../node_modules",
+    "../../../../../node_modules",
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxtjs/tailwindcss/node_modules",
-    "../node_modules/nuxt-icon/node_modules",
-    "../node_modules/@nuxtjs/google-fonts/node_modules",
-    "../node_modules/@vueuse/nuxt/node_modules",
     "../node_modules/@pinia/nuxt/node_modules",
-    "../node_modules/@nuxt/devtools/node_modules",
+    "../node_modules/@vueuse/nuxt/node_modules",
+    "../node_modules/@nuxt/image/node_modules",
+    "../node_modules/@nuxtjs/color-mode/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../dist"
   ]

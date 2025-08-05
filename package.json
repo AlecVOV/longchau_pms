@@ -1,31 +1,45 @@
 {
-  "name": "gourmet-restaurant",
+  "name": "pharmacy-ecommerce",
   "private": true,
   "type": "module",
   "scripts": {
-    "install": "nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
-    "@vueuse/core": "^10.5.0",
-    "@vueuse/nuxt": "^10.5.0",
-    "nuxt": "^3.7.4",
-    "sass": "^1.69.3",
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "postinstall": "nuxt prepare",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "tsx scripts/seed-simple.ts",
+    "db:studio": "prisma studio",
+    "db:reset": "prisma db push --force-reset && npm run db:seed"
   },
   "dependencies": {
-    "nuxt-icon": "^0.5.0",
-    "@headlessui/vue": "^1.7.16",
-    "@nuxtjs/google-fonts": "^3.0.2",
+    "@heroicons/vue": "^2.2.0",
+    "@iconify-json/ph": "^1.2.2",
+    "@nuxt/image": "^1.0.0",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.5.1",
+    "@prisma/client": "^6.13.0",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.17.0",
+    "nuxt": "^3.13.0",
     "pinia": "^2.1.6",
-    "vue-tilt.js": "^1.1.1",
-    "swiper": "^10.3.1"
+    "vue": "^3.3.4",
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.366",
+    "@iconify/vue": "^4.1.1",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/color-mode": "^3.3.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@unocss/nuxt": "^66.4.1",
+    "@vueuse/core": "^10.3.0",
+    "@vueuse/nuxt": "^10.3.0",
+    "prisma": "^6.13.0",
+    "tsx": "^4.20.3"
   }
 }

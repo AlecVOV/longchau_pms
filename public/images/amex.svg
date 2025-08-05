@@ -1,0 +1,7 @@
+<svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" rx="6" fill="#006FCF"/>
+  <path d="M35.12 21.02h129.76c1.18 0 2.14.96 2.14 2.14v13.68c0 1.18-.96 2.14-2.14 2.14H35.12c-1.18 0-2.14-.96-2.14-2.14V23.16c0-1.18.96-2.14 2.14-2.14z" fill="white"/>
+  <text x="100" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#006FCF">AMERICAN EXPRESS</text>
+  <path d="M45 25h15l3 4-3 4H45l3-4-3-4z" fill="#006FCF"/>
+  <path d="M140 25h15l3 4-3 4h-15l3-4-3-4z" fill="#006FCF"/>
+</svg>

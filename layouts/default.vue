@@ -1,12 +1,21 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <AppHeader />
+    <SiteHeader />
+    
     <main class="flex-grow">
       <slot />
     </main>
-    <AppFooter />
+    
+    <SiteFooter />
+    
+    <!-- Toast notifications -->
+    <ToastContainer />
+    
+    <!-- Session expiry warning -->
+    <SessionExpiryWarning />
   </div>
 </template>
 
 <script setup>
+// Layout component that wraps all pages
 </script>
