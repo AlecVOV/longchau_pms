@@ -1,1 +1,1 @@
-export { default } from "file:///C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export { default } from "file:///C:/Users/Admin/Desktop/longchau_pms/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"

@@ -1,1 +1,0 @@
-import{S as a,q as r,H as t}from"./4Al0cLfe.js";const n=a((i,s)=>{const e=r();if(e.isLoggedIn||e.initializeAuth(),!e.isLoggedIn)return t({path:"/login",query:{redirect:i.fullPath}});e.isSessionValid||e.refreshAuthToken().catch(()=>t({path:"/login",query:{redirect:i.fullPath,message:"Session expired. Please log in again."}}))});export{n as default};

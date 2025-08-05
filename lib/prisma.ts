@@ -6,7 +6,7 @@ declare global {
 
 // Set DATABASE_URL if not already set
 if (!process.env.DATABASE_URL) {
-  process.env.DATABASE_URL = 'file:C:/Users/Admin/Desktop/Ver 2/Pharmacy Website/project/prisma/dev.db'
+  process.env.DATABASE_URL = 'file:./prisma/dev.db'
 }
 
 let prisma: PrismaClient

@@ -3,45 +3,45 @@ import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, getQuery as getQuery$1, readBody, getResponseStatus, createError, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getHeader, getCookie, getMethod, getHeaders, getResponseStatusText } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/h3/dist/index.mjs';
-import { escapeHtml } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/@vue/shared/dist/shared.cjs.js';
-import bcrypt from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/bcryptjs/index.js';
-import { z } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/zod/index.js';
-import { addReminder, debugState, getReminders, deleteReminder, updateReminder, getReminderById, calculateNextReminder } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/lib/temp-reminders.js';
-import jwt from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/jsonwebtoken/index.js';
-import { PrismaClient } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/@prisma/client/default.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/vue/server-renderer/index.mjs';
-import { klona } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/defu/dist/defu.mjs';
-import destr, { destr as destr$1 } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/destr/dist/index.mjs';
-import { snakeCase } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/scule/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/unhead/dist/server.mjs';
-import { stringify, uneval } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/devalue/index.js';
-import { isVNode, toValue, isRef } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/vue/index.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, getQuery as getQuery$1, readBody, getResponseStatus, createError, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getHeader, getCookie, getMethod, getHeaders, getResponseStatusText } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/h3/dist/index.mjs';
+import { escapeHtml } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/@vue/shared/dist/shared.cjs.js';
+import bcrypt from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/bcryptjs/index.js';
+import { z } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/zod/index.js';
+import { addReminder, debugState, getReminders, deleteReminder, updateReminder, getReminderById, calculateNextReminder } from 'file://C:/Users/Admin/Desktop/longchau_pms/lib/temp-reminders.js';
+import jwt from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/jsonwebtoken/index.js';
+import { PrismaClient } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/@prisma/client/default.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/vue/server-renderer/index.mjs';
+import { klona } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/defu/dist/defu.mjs';
+import destr, { destr as destr$1 } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/destr/dist/index.mjs';
+import { snakeCase } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/scule/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/devalue/index.js';
+import { isVNode, toValue, isRef } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/vue/index.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/unhead/dist/plugins.mjs';
+import { createHooks } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1 } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/errx/dist/index.js';
-import { walkResolver } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/unhead/dist/utils.mjs';
+import { getContext } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/errx/dist/index.js';
+import { walkResolver } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/unhead/dist/utils.mjs';
 import { fileURLToPath } from 'node:url';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/ipx/dist/index.mjs';
-import { isAbsolute } from 'file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/node_modules/pathe/dist/index.mjs';
+import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/ipx/dist/index.mjs';
+import { isAbsolute } from 'file://C:/Users/Admin/Desktop/longchau_pms/node_modules/pathe/dist/index.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/Admin/Desktop/Final/Pharmacy Website/project/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/Admin/Desktop/longchau_pms/server/assets"}];
 
 const assets = createStorage();
 
@@ -53,11 +53,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/Admin/Desktop/Final/Pharmacy Website/project","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/Admin/Desktop/Final/Pharmacy Website/project/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/Admin/Desktop/Final/Pharmacy Website/project/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/Admin/Desktop/Final/Pharmacy Website/project/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/Admin/Desktop/Final/Pharmacy Website/project/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/Admin/Desktop/longchau_pms","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/Admin/Desktop/longchau_pms/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/Admin/Desktop/longchau_pms/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/Admin/Desktop/longchau_pms/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/Admin/Desktop/longchau_pms/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -655,14 +655,14 @@ const _inlineRuntimeConfig = {
   "public": {
     "apiBase": "/api"
   },
-  "databaseUrl": "file:C:/Users/Admin/Desktop/Final/Pharmacy Website/project/prisma/dev.db",
+  "databaseUrl": "file:./prisma/dev.db",
   "jwtSecret": "your-jwt-secret-key",
   "ipx": {
     "baseURL": "/_ipx",
     "alias": {},
     "fs": {
       "dir": [
-        "C:/Users/Admin/Desktop/Final/Pharmacy Website/project/public"
+        "C:/Users/Admin/Desktop/longchau_pms/public"
       ]
     },
     "http": {
@@ -1018,7 +1018,7 @@ async function errorHandler(error, event) {
   // H3 will handle fallback
 }
 
-const rootDir = "C:/Users/Admin/Desktop/Final/Pharmacy Website/project";
+const rootDir = "C:/Users/Admin/Desktop/longchau_pms";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"description","content":"Your trusted online pharmacy for medications and medical equipment"}],"link":[{"rel":"icon","type":"image/png","href":"/favicon.webp"}],"style":[],"script":[],"noscript":[],"title":"Long Châu - Online Pharmacy & Medical Equipment"};
 
@@ -1037,7 +1037,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _WK7wlsuZeeAf849gdB589rIoQMf5F9YgnqZ1jvHJ7OA = (nitroApp) => {
+const _3O8H0TuX2qiivMQJRzh6aQ8QU9_bsi78sFGWNNvgCA = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1108,15 +1108,15 @@ function onConsoleLog(callback) {
 
 const script = "\"use strict\";(()=>{const t=window,e=document.documentElement,c=[\"dark\",\"light\"],n=getStorageValue(\"localStorage\",\"nuxt-color-mode\")||\"light\";let i=n===\"system\"?u():n;const r=e.getAttribute(\"data-color-mode-forced\");r&&(i=r),l(i),t[\"__NUXT_COLOR_MODE__\"]={preference:n,value:i,getColorScheme:u,addColorScheme:l,removeColorScheme:d};function l(o){const s=\"\"+o+\"\",a=\"\";e.classList?e.classList.add(s):e.className+=\" \"+s,a&&e.setAttribute(\"data-\"+a,o)}function d(o){const s=\"\"+o+\"\",a=\"\";e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp(s,\"g\"),\"\"),a&&e.removeAttribute(\"data-\"+a)}function f(o){return t.matchMedia(\"(prefers-color-scheme\"+o+\")\")}function u(){if(t.matchMedia&&f(\"\").media!==\"not all\"){for(const o of c)if(f(\":\"+o).matches)return o}return\"light\"}})();function getStorageValue(t,e){switch(t){case\"localStorage\":return window.localStorage.getItem(e);case\"sessionStorage\":return window.sessionStorage.getItem(e);case\"cookie\":return getCookie(e);default:return null}}function getCookie(t){const c=(\"; \"+window.document.cookie).split(\"; \"+t+\"=\");if(c.length===2)return c.pop()?.split(\";\").shift()}";
 
-const _tQKk14EnFCKbBIUExXLcPCdNLuxgkk8vBjC3KlhAzeQ = (function(nitro) {
+const _dY45Nv1NircUmryMO94hqNuzsGNnWnkRtVyZocLXbk = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
 const plugins = [
-  _WK7wlsuZeeAf849gdB589rIoQMf5F9YgnqZ1jvHJ7OA,
-_tQKk14EnFCKbBIUExXLcPCdNLuxgkk8vBjC3KlhAzeQ
+  _3O8H0TuX2qiivMQJRzh6aQ8QU9_bsi78sFGWNNvgCA,
+_dY45Nv1NircUmryMO94hqNuzsGNnWnkRtVyZocLXbk
 ];
 
 const VueResolver = (_, value) => {
@@ -1190,8 +1190,8 @@ function publicAssetsURL(...path) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getServerEntry = () => import('file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
-const getClientManifest = () => import('file://C:/Users/Admin/Desktop/Final/Pharmacy%20Website/project/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file://C:/Users/Admin/Desktop/longchau_pms/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file://C:/Users/Admin/Desktop/longchau_pms/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
@@ -1513,7 +1513,7 @@ async function runTask(name, {
   }
 }
 
-const _f6WIcS = lazyEventHandler(() => {
+const _aWfDTM = lazyEventHandler(() => {
   const opts = useRuntimeConfig().ipx || {};
   const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
   const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
@@ -1531,63 +1531,63 @@ const _f6WIcS = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
-const _lazy_32neSb = () => Promise.resolve().then(function () { return orders_get$1; });
-const _lazy_LnOBBE = () => Promise.resolve().then(function () { return _id__patch$1; });
-const _lazy_HTN3a7 = () => Promise.resolve().then(function () { return index_post$5; });
-const _lazy_6Dvzdp = () => Promise.resolve().then(function () { return login_post$1; });
-const _lazy_5cGQVJ = () => Promise.resolve().then(function () { return logout_post$1; });
-const _lazy_OF5qpU = () => Promise.resolve().then(function () { return me_get$1; });
-const _lazy_kvTT8N = () => Promise.resolve().then(function () { return profile$1; });
-const _lazy_pGA7Wn = () => Promise.resolve().then(function () { return refresh_post$1; });
-const _lazy_3hh7DD = () => Promise.resolve().then(function () { return register_post$1; });
-const _lazy_X2nFbL = () => Promise.resolve().then(function () { return products_get$1; });
-const _lazy_FcDAeD = () => Promise.resolve().then(function () { return index_get$9; });
-const _lazy_LpMrNt = () => Promise.resolve().then(function () { return addSampleReminders_post$1; });
-const _lazy_lGdsn0 = () => Promise.resolve().then(function () { return reminders_get$1; });
-const _lazy_U4WS1U = () => Promise.resolve().then(function () { return _id__delete$1; });
-const _lazy_sjo4gZ = () => Promise.resolve().then(function () { return _id_$1; });
-const _lazy_jWZxBf = () => Promise.resolve().then(function () { return index_get$7; });
-const _lazy_1NOy7c = () => Promise.resolve().then(function () { return index_post$3; });
-const _lazy_zo_cjX = () => Promise.resolve().then(function () { return _id__get$3; });
-const _lazy_FT6EFb = () => Promise.resolve().then(function () { return index_get$5; });
-const _lazy_zrZaDP = () => Promise.resolve().then(function () { return index_post$1; });
-const _lazy_KiPz42 = () => Promise.resolve().then(function () { return index_get$3; });
-const _lazy_cJHexB = () => Promise.resolve().then(function () { return _id__get$1; });
-const _lazy_cAQOrt = () => Promise.resolve().then(function () { return inventory$1; });
-const _lazy_COC1Z8 = () => Promise.resolve().then(function () { return index_get$1; });
-const _lazy_ZSvxY1 = () => Promise.resolve().then(function () { return search_get$1; });
-const _lazy_n9QW2Q = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_rQ5zS9 = () => Promise.resolve().then(function () { return orders_get$1; });
+const _lazy_ez1l7U = () => Promise.resolve().then(function () { return _id__patch$1; });
+const _lazy_f07bxy = () => Promise.resolve().then(function () { return index_post$5; });
+const _lazy_sGLIzF = () => Promise.resolve().then(function () { return login_post$1; });
+const _lazy_CPE44f = () => Promise.resolve().then(function () { return logout_post$1; });
+const _lazy_xyzruz = () => Promise.resolve().then(function () { return me_get$1; });
+const _lazy_Lc41SV = () => Promise.resolve().then(function () { return profile$1; });
+const _lazy_uNkA58 = () => Promise.resolve().then(function () { return refresh_post$1; });
+const _lazy_B4qTEr = () => Promise.resolve().then(function () { return register_post$1; });
+const _lazy_CQlgJl = () => Promise.resolve().then(function () { return products_get$1; });
+const _lazy_Ip0e3o = () => Promise.resolve().then(function () { return index_get$9; });
+const _lazy_YPU5C1 = () => Promise.resolve().then(function () { return addSampleReminders_post$1; });
+const _lazy_vNjPs6 = () => Promise.resolve().then(function () { return reminders_get$1; });
+const _lazy_UZVBxN = () => Promise.resolve().then(function () { return _id__delete$1; });
+const _lazy_C3Xm_d = () => Promise.resolve().then(function () { return _id_$1; });
+const _lazy_AiyVDo = () => Promise.resolve().then(function () { return index_get$7; });
+const _lazy_YfOgJ8 = () => Promise.resolve().then(function () { return index_post$3; });
+const _lazy_HdF4C4 = () => Promise.resolve().then(function () { return _id__get$3; });
+const _lazy_L123nv = () => Promise.resolve().then(function () { return index_get$5; });
+const _lazy_n6jesh = () => Promise.resolve().then(function () { return index_post$1; });
+const _lazy_rp9LW4 = () => Promise.resolve().then(function () { return index_get$3; });
+const _lazy_Duo7DK = () => Promise.resolve().then(function () { return _id__get$1; });
+const _lazy_9_woUp = () => Promise.resolve().then(function () { return inventory$1; });
+const _lazy_aGJ65H = () => Promise.resolve().then(function () { return index_get$1; });
+const _lazy_XFmoek = () => Promise.resolve().then(function () { return search_get$1; });
+const _lazy_kbPyss = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/api/admin/orders', handler: _lazy_32neSb, lazy: true, middleware: false, method: "get" },
-  { route: '/api/admin/orders/:id', handler: _lazy_LnOBBE, lazy: true, middleware: false, method: "patch" },
-  { route: '/api/admin/users', handler: _lazy_HTN3a7, lazy: true, middleware: false, method: "post" },
-  { route: '/api/auth/login', handler: _lazy_6Dvzdp, lazy: true, middleware: false, method: "post" },
-  { route: '/api/auth/logout', handler: _lazy_5cGQVJ, lazy: true, middleware: false, method: "post" },
-  { route: '/api/auth/me', handler: _lazy_OF5qpU, lazy: true, middleware: false, method: "get" },
-  { route: '/api/auth/profile', handler: _lazy_kvTT8N, lazy: true, middleware: false, method: undefined },
-  { route: '/api/auth/refresh', handler: _lazy_pGA7Wn, lazy: true, middleware: false, method: "post" },
-  { route: '/api/auth/register', handler: _lazy_3hh7DD, lazy: true, middleware: false, method: "post" },
-  { route: '/api/categories/:id/products', handler: _lazy_X2nFbL, lazy: true, middleware: false, method: "get" },
-  { route: '/api/categories', handler: _lazy_FcDAeD, lazy: true, middleware: false, method: "get" },
-  { route: '/api/debug/add-sample-reminders', handler: _lazy_LpMrNt, lazy: true, middleware: false, method: "post" },
-  { route: '/api/debug/reminders', handler: _lazy_lGdsn0, lazy: true, middleware: false, method: "get" },
-  { route: '/api/medication-reminders/:id', handler: _lazy_U4WS1U, lazy: true, middleware: false, method: "delete" },
-  { route: '/api/medication-reminders/:id', handler: _lazy_sjo4gZ, lazy: true, middleware: false, method: undefined },
-  { route: '/api/medication-reminders', handler: _lazy_jWZxBf, lazy: true, middleware: false, method: "get" },
-  { route: '/api/medication-reminders', handler: _lazy_1NOy7c, lazy: true, middleware: false, method: "post" },
-  { route: '/api/orders/:id', handler: _lazy_zo_cjX, lazy: true, middleware: false, method: "get" },
-  { route: '/api/orders', handler: _lazy_FT6EFb, lazy: true, middleware: false, method: "get" },
-  { route: '/api/orders', handler: _lazy_zrZaDP, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prescriptions', handler: _lazy_KiPz42, lazy: true, middleware: false, method: "get" },
-  { route: '/api/products/:id', handler: _lazy_cJHexB, lazy: true, middleware: false, method: "get" },
-  { route: '/api/products/:id/inventory', handler: _lazy_cAQOrt, lazy: true, middleware: false, method: undefined },
-  { route: '/api/products', handler: _lazy_COC1Z8, lazy: true, middleware: false, method: "get" },
-  { route: '/api/products/search', handler: _lazy_ZSvxY1, lazy: true, middleware: false, method: "get" },
-  { route: '/__nuxt_error', handler: _lazy_n9QW2Q, lazy: true, middleware: false, method: undefined },
+  { route: '/api/admin/orders', handler: _lazy_rQ5zS9, lazy: true, middleware: false, method: "get" },
+  { route: '/api/admin/orders/:id', handler: _lazy_ez1l7U, lazy: true, middleware: false, method: "patch" },
+  { route: '/api/admin/users', handler: _lazy_f07bxy, lazy: true, middleware: false, method: "post" },
+  { route: '/api/auth/login', handler: _lazy_sGLIzF, lazy: true, middleware: false, method: "post" },
+  { route: '/api/auth/logout', handler: _lazy_CPE44f, lazy: true, middleware: false, method: "post" },
+  { route: '/api/auth/me', handler: _lazy_xyzruz, lazy: true, middleware: false, method: "get" },
+  { route: '/api/auth/profile', handler: _lazy_Lc41SV, lazy: true, middleware: false, method: undefined },
+  { route: '/api/auth/refresh', handler: _lazy_uNkA58, lazy: true, middleware: false, method: "post" },
+  { route: '/api/auth/register', handler: _lazy_B4qTEr, lazy: true, middleware: false, method: "post" },
+  { route: '/api/categories/:id/products', handler: _lazy_CQlgJl, lazy: true, middleware: false, method: "get" },
+  { route: '/api/categories', handler: _lazy_Ip0e3o, lazy: true, middleware: false, method: "get" },
+  { route: '/api/debug/add-sample-reminders', handler: _lazy_YPU5C1, lazy: true, middleware: false, method: "post" },
+  { route: '/api/debug/reminders', handler: _lazy_vNjPs6, lazy: true, middleware: false, method: "get" },
+  { route: '/api/medication-reminders/:id', handler: _lazy_UZVBxN, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/medication-reminders/:id', handler: _lazy_C3Xm_d, lazy: true, middleware: false, method: undefined },
+  { route: '/api/medication-reminders', handler: _lazy_AiyVDo, lazy: true, middleware: false, method: "get" },
+  { route: '/api/medication-reminders', handler: _lazy_YfOgJ8, lazy: true, middleware: false, method: "post" },
+  { route: '/api/orders/:id', handler: _lazy_HdF4C4, lazy: true, middleware: false, method: "get" },
+  { route: '/api/orders', handler: _lazy_L123nv, lazy: true, middleware: false, method: "get" },
+  { route: '/api/orders', handler: _lazy_n6jesh, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prescriptions', handler: _lazy_rp9LW4, lazy: true, middleware: false, method: "get" },
+  { route: '/api/products/:id', handler: _lazy_Duo7DK, lazy: true, middleware: false, method: "get" },
+  { route: '/api/products/:id/inventory', handler: _lazy_9_woUp, lazy: true, middleware: false, method: undefined },
+  { route: '/api/products', handler: _lazy_aGJ65H, lazy: true, middleware: false, method: "get" },
+  { route: '/api/products/search', handler: _lazy_XFmoek, lazy: true, middleware: false, method: "get" },
+  { route: '/__nuxt_error', handler: _lazy_kbPyss, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/_ipx/**', handler: _f6WIcS, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_n9QW2Q, lazy: true, middleware: false, method: undefined }
+  { route: '/_ipx/**', handler: _aWfDTM, lazy: false, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_kbPyss, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -1840,7 +1840,7 @@ const styles$1 = /*#__PURE__*/Object.freeze({
 });
 
 if (!process.env.DATABASE_URL) {
-  process.env.DATABASE_URL = "file:C:/Users/Admin/Desktop/Ver 2/Pharmacy Website/project/prisma/dev.db";
+  process.env.DATABASE_URL = "file:./prisma/dev.db";
 }
 let prisma;
 {
