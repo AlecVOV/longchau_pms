@@ -1,0 +1,377 @@
+import { _ as __nuxt_component_0 } from "../server.mjs";
+import __nuxt_component_1 from "./ProductCardSkeleton-Bg6tKffj.js";
+import _sfc_main$1 from "./ProductCard-0zuHsmiv.js";
+import { withAsyncContext, computed, withCtx, createTextVNode, createVNode, toDisplayString, unref, useSSRContext } from "vue";
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr } from "vue/server-renderer";
+import { useCartStore } from "./cart-Cj2Ys50X.js";
+import { u as useProductsStore } from "./products-SeWkcUmE.js";
+import "ofetch";
+import "#internal/nuxt/paths";
+import "C:/Users/Admin/Desktop/Final/Pharmacy Website/project/node_modules/hookable/dist/index.mjs";
+import "C:/Users/Admin/Desktop/Final/Pharmacy Website/project/node_modules/unctx/dist/index.mjs";
+import "C:/Users/Admin/Desktop/Final/Pharmacy Website/project/node_modules/h3/dist/index.mjs";
+import "vue-router";
+import "C:/Users/Admin/Desktop/Final/Pharmacy Website/project/node_modules/radix3/dist/index.mjs";
+import "C:/Users/Admin/Desktop/Final/Pharmacy Website/project/node_modules/defu/dist/defu.mjs";
+import "C:/Users/Admin/Desktop/Final/Pharmacy Website/project/node_modules/ufo/dist/index.mjs";
+import "C:/Users/Admin/Desktop/Final/Pharmacy Website/project/node_modules/klona/dist/index.mjs";
+import "C:/Users/Admin/Desktop/Final/Pharmacy Website/project/node_modules/@unhead/vue/dist/index.mjs";
+import "./_plugin-vue_export-helper-1tPrXgE0.js";
+const _sfc_main = {
+  __name: "index",
+  __ssrInlineRender: true,
+  async setup(__props) {
+    let __temp, __restore;
+    const cartStore = useCartStore();
+    const productsStore = useProductsStore();
+    [__temp, __restore] = withAsyncContext(() => productsStore.fetchProducts({ limit: 8, featured: true })), await __temp, __restore();
+    const featuredProducts = computed(() => {
+      const inStockProducts = productsStore.getInStockProducts;
+      return inStockProducts.slice(0, 8);
+    });
+    const featuredCategories = [
+      {
+        name: "Allergy",
+        slug: "allergy",
+        description: "Products to help manage allergy symptoms.",
+        icon: "🌞"
+      },
+      {
+        name: "Cold & Flu",
+        slug: "cold-flu",
+        description: "Relief for cold and flu symptoms.",
+        icon: "🌡️"
+      },
+      {
+        name: "Diabetes Care",
+        slug: "diabetes-care",
+        description: "Essential products for diabetes management.",
+        icon: "🩸"
+      },
+      {
+        name: "First Aid",
+        slug: "first-aid",
+        description: "Complete first aid kits and supplies.",
+        icon: "🩹"
+      },
+      {
+        name: "Heart Health",
+        slug: "heart-health",
+        description: "Medications and devices for heart health.",
+        icon: "❤️"
+      },
+      {
+        name: "Medical Devices",
+        slug: "medical-devices",
+        description: "Quality medical devices for home use.",
+        icon: "🩺"
+      },
+      {
+        name: "OTC Medicines",
+        slug: "otc-medicines",
+        description: "Over-the-counter medications for common ailments.",
+        icon: "💊"
+      },
+      {
+        name: "Pain Relief",
+        slug: "pain-relief",
+        description: "Effective pain relief solutions.",
+        icon: "🏥"
+      },
+      {
+        name: "Personal Care",
+        slug: "personal-care",
+        description: "Personal care products for everyday needs.",
+        icon: "🧴"
+      },
+      {
+        name: "Skin Care",
+        slug: "skin-care",
+        description: "Skincare products for all skin types.",
+        icon: "🧴"
+      },
+      {
+        name: "Vitamins & Supplements",
+        slug: "vitamins-supplements",
+        description: "Vitamins and supplements to boost your health.",
+        icon: "💊"
+      }
+    ];
+    const testimonials = [
+      {
+        name: "Nguyễn Phan Quốc Việt",
+        location: "Ho Chi Minh City, Vietnam",
+        content: "Long Châu đã giúp việc quản lý bệnh mãn tính của tôi trở nên dễ dàng hơn rất nhiều. Việc tự động gia hạn đơn thuốc và giao hàng nhanh đảm bảo tôi không bao giờ bỏ lỡ liều uống. Dịch vụ khách hàng của họ thật tuyệt vời!",
+        avatar: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
+      },
+      {
+        name: "Nguyễn Tấn Phát",
+        location: "Ho Chi Minh City, Vietnam",
+        content: "Tôi đã sử dụng Long Châu được hơn một năm và không thể hài lòng hơn. Giá cả của họ cạnh tranh và quy trình tải lên đơn thuốc cực kỳ đơn giản.",
+        avatar: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
+      },
+      {
+        name: "Lương Gia Huy",
+        location: "Ho Chi Minh City, Vietnam",
+        content: "Là người phải dùng nhiều loại thuốc, Long Châu thực sự là cứu cánh của tôi. Các dược sĩ của họ luôn sẵn sàng trả lời các câu hỏi về tương tác thuốc tiềm tàng.",
+        avatar: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
+      }
+    ];
+    const articles = [
+      {
+        title: "Understanding Blood Pressure: What the Numbers Mean",
+        slug: "understanding-blood-pressure",
+        excerpt: "Learn about the importance of monitoring your blood pressure and what the readings actually indicate for your health.",
+        image: "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg",
+        date: "May 15, 2025",
+        author: "Dr. James Wilson",
+        authorAvatar: "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg",
+        category: "Heart Health"
+      },
+      {
+        title: "The Importance of Vitamin D: Are You Getting Enough?",
+        slug: "importance-of-vitamin-d",
+        excerpt: "Vitamin D deficiency is common, especially in winter months. Discover how to ensure you're getting adequate levels.",
+        image: "https://images.pexels.com/photos/4046767/pexels-photo-4046767.jpeg",
+        date: "May 10, 2025",
+        author: "Dr. Lisa Chen",
+        authorAvatar: "https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg",
+        category: "Nutrition"
+      },
+      {
+        title: "Managing Seasonal Allergies: Tips and Treatments",
+        slug: "managing-seasonal-allergies",
+        excerpt: "Seasonal allergies affect millions. Here are effective strategies to minimize symptoms and enjoy the outdoors again.",
+        image: "https://images.pexels.com/photos/5938360/pexels-photo-5938360.jpeg",
+        date: "May 5, 2025",
+        author: "Dr. Robert Taylor",
+        authorAvatar: "https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg",
+        category: "Allergy"
+      }
+    ];
+    const addToCart = (product) => {
+      cartStore.addItem(product);
+    };
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_NuxtLink = __nuxt_component_0;
+      const _component_ProductCardSkeleton = __nuxt_component_1;
+      const _component_ProductCard = _sfc_main$1;
+      _push(`<div${ssrRenderAttrs(_attrs)}><section class="relative bg-primary-50 overflow-hidden"><div class="container-custom py-12 md:py-16 lg:py-20"><div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"><div><h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4 leading-tight"> Your Trusted Online <span class="text-primary-600">Pharmacy</span></h1><p class="text-lg text-neutral-600 mb-6 max-w-lg"> Quality medications and medical equipment delivered to your doorstep with the highest standards of safety and care. </p><div class="flex flex-col sm:flex-row gap-4 mb-8">`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/category/otc-medicines",
+        class: "btn-primary"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Shop Medicines `);
+          } else {
+            return [
+              createTextVNode(" Shop Medicines ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/upload-prescription",
+        class: "btn-outline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(` Upload Prescription `);
+          } else {
+            return [
+              createTextVNode(" Upload Prescription ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div><div class="flex items-center gap-6 flex-wrap"><div class="flex items-center"><span class="text-2xl text-primary-600 mr-2">🚚</span><span class="text-sm font-medium">Free Delivery</span></div><div class="flex items-center"><span class="text-2xl text-primary-600 mr-2">🕒</span><span class="text-sm font-medium">24/7 Support</span></div><div class="flex items-center"><span class="text-2xl text-primary-600 mr-2">🛡️</span><span class="text-sm font-medium">Verified Products</span></div></div></div><div class="relative"><img src="https://images.pexels.com/photos/5699514/pexels-photo-5699514.jpeg" alt="Online Pharmacy" class="rounded-lg shadow-lg object-cover w-full h-auto max-h-[500px]"><div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block"><div class="flex items-center"><span class="text-warning-500 text-2xl">⭐</span><div class="ml-3"><p class="font-semibold text-neutral-800">Trusted by 2M+ customers</p><p class="text-sm text-neutral-500">4.9/5 average rating</p></div></div></div></div></div></div><div class="absolute -bottom-8 -right-8 w-64 h-64 bg-primary-100 rounded-full opacity-70"></div><div class="absolute -top-12 -left-12 w-40 h-40 bg-secondary-100 rounded-full opacity-50"></div></section><section class="py-12 md:py-16 bg-white"><div class="container-custom"><div class="text-center mb-10"><h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-3">Shop by Category</h2><p class="text-neutral-600 max-w-2xl mx-auto">Browse our wide range of medications and medical equipment categorized for easy navigation.</p></div><div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"><!--[-->`);
+      ssrRenderList(featuredCategories, (category) => {
+        _push(ssrRenderComponent(_component_NuxtLink, {
+          key: category.slug,
+          to: `/category/${category.slug}`,
+          class: "group"
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`<div class="card p-4 text-center transition-all hover:border-primary-300 h-full flex flex-col justify-between"${_scopeId}><div class="mb-4 mx-auto p-3 rounded-full bg-primary-50 text-primary-600 group-hover:bg-primary-100 transition-colors w-16 h-16 flex items-center justify-center"${_scopeId}><span class="text-3xl"${_scopeId}>${ssrInterpolate(category.icon)}</span></div><div${_scopeId}><h3 class="font-medium text-lg text-neutral-800 mb-2"${_scopeId}>${ssrInterpolate(category.name)}</h3><p class="text-sm text-neutral-500"${_scopeId}>${ssrInterpolate(category.description)}</p></div></div>`);
+            } else {
+              return [
+                createVNode("div", { class: "card p-4 text-center transition-all hover:border-primary-300 h-full flex flex-col justify-between" }, [
+                  createVNode("div", { class: "mb-4 mx-auto p-3 rounded-full bg-primary-50 text-primary-600 group-hover:bg-primary-100 transition-colors w-16 h-16 flex items-center justify-center" }, [
+                    createVNode("span", { class: "text-3xl" }, toDisplayString(category.icon), 1)
+                  ]),
+                  createVNode("div", null, [
+                    createVNode("h3", { class: "font-medium text-lg text-neutral-800 mb-2" }, toDisplayString(category.name), 1),
+                    createVNode("p", { class: "text-sm text-neutral-500" }, toDisplayString(category.description), 1)
+                  ])
+                ])
+              ];
+            }
+          }),
+          _: 2
+        }, _parent));
+      });
+      _push(`<!--]--></div></div></section><section class="py-12 md:py-16 bg-neutral-50"><div class="container-custom"><div class="flex justify-between items-end mb-8"><div><h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-3">Popular Products</h2><p class="text-neutral-600">Top-selling medications and health products our customers love.</p></div><div class="hidden md:block">`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/products",
+        class: "btn-outline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`View All`);
+          } else {
+            return [
+              createTextVNode("View All")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></div>`);
+      if (unref(productsStore).loading) {
+        _push(`<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"><!--[-->`);
+        ssrRenderList(8, (n) => {
+          _push(ssrRenderComponent(_component_ProductCardSkeleton, { key: n }, null, _parent));
+        });
+        _push(`<!--]--></div>`);
+      } else if (unref(featuredProducts).length > 0) {
+        _push(`<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"><!--[-->`);
+        ssrRenderList(unref(featuredProducts), (product) => {
+          _push(ssrRenderComponent(_component_ProductCard, {
+            key: product.id,
+            product,
+            onAddToCart: addToCart
+          }, null, _parent));
+        });
+        _push(`<!--]--></div>`);
+      } else {
+        _push(`<div class="text-center py-12"><p class="text-gray-500 text-lg">No products available at the moment.</p>`);
+        _push(ssrRenderComponent(_component_NuxtLink, {
+          to: "/products",
+          class: "btn-primary mt-4"
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`Browse All Products`);
+            } else {
+              return [
+                createTextVNode("Browse All Products")
+              ];
+            }
+          }),
+          _: 1
+        }, _parent));
+        _push(`</div>`);
+      }
+      _push(`<div class="text-center mt-8 md:hidden">`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/products",
+        class: "btn-outline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`View All Products`);
+          } else {
+            return [
+              createTextVNode("View All Products")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></div></section><section class="py-12 md:py-16 bg-white"><div class="container-custom"><div class="text-center mb-12"><h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-3">Why Choose Long Châu?</h2><p class="text-neutral-600 max-w-2xl mx-auto">Experience the convenience and reliability of Vietnam&#39;s trusted online pharmacy.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"><div class="card p-6"><div class="mb-4 w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center"><span class="text-2xl text-primary-600">🏆</span></div><h3 class="text-xl font-semibold text-neutral-800 mb-2">Genuine Products</h3><p class="text-neutral-600">All our medicines and equipment are sourced from authorized distributors and manufacturers.</p></div><div class="card p-6"><div class="mb-4 w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center"><span class="text-2xl text-primary-600">🚚</span></div><h3 class="text-xl font-semibold text-neutral-800 mb-2">Fast Delivery</h3><p class="text-neutral-600">Quick and reliable delivery to ensure you never run out of essential medications.</p></div><div class="card p-6"><div class="mb-4 w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center"><span class="text-2xl text-primary-600">👨‍⚕️</span></div><h3 class="text-xl font-semibold text-neutral-800 mb-2">Expert Consultation</h3><p class="text-neutral-600">Our qualified pharmacists are available to provide guidance and answer your questions.</p></div><div class="card p-6"><div class="mb-4 w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center"><span class="text-2xl text-primary-600">🛡️</span></div><h3 class="text-xl font-semibold text-neutral-800 mb-2">Secure Checkout</h3><p class="text-neutral-600">Your personal and payment information is protected with advanced encryption technology.</p></div><div class="card p-6"><div class="mb-4 w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center"><span class="text-2xl text-primary-600">💰</span></div><h3 class="text-xl font-semibold text-neutral-800 mb-2">Competitive Pricing</h3><p class="text-neutral-600">We offer the best prices on medications and medical equipment without compromising quality.</p></div><div class="card p-6"><div class="mb-4 w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center"><span class="text-2xl text-primary-600">📞</span></div><h3 class="text-xl font-semibold text-neutral-800 mb-2">24/7 Customer Support</h3><p class="text-neutral-600">Our dedicated customer service team is always available to assist you.</p></div></div></div></section><section class="py-12 md:py-16 bg-primary-50"><div class="container-custom"><div class="text-center mb-12"><h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-3">Khách Hàng Nói Gì Về Chúng Tôi</h2><p class="text-neutral-600 max-w-2xl mx-auto">Hàng nghìn khách hàng hài lòng tin tưởng Long Châu cho nhu cầu chăm sóc sức khỏe của họ.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><!--[-->`);
+      ssrRenderList(testimonials, (testimonial, index) => {
+        _push(`<div class="card p-6"><div class="flex text-warning-500 mb-4"><!--[-->`);
+        ssrRenderList(5, (n) => {
+          _push(`<span>⭐</span>`);
+        });
+        _push(`<!--]--></div><p class="text-neutral-700 mb-6 text-lg italic">${ssrInterpolate(testimonial.content)}</p><div class="flex items-center"><img${ssrRenderAttr("src", testimonial.avatar)}${ssrRenderAttr("alt", testimonial.name)} class="w-12 h-12 rounded-full object-cover mr-4"><div><h4 class="font-medium text-neutral-800">${ssrInterpolate(testimonial.name)}</h4><p class="text-sm text-neutral-500">${ssrInterpolate(testimonial.location)}</p></div></div></div>`);
+      });
+      _push(`<!--]--></div></div></section><section class="py-12 md:py-16 bg-white"><div class="container-custom"><div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-8 md:p-12"><div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"><div><h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Stay Updated with Health Tips</h2><p class="text-primary-100 mb-6">Subscribe to our newsletter and receive health tips, exclusive offers, and updates on new products.</p><div class="flex flex-col sm:flex-row gap-3"><input type="email" placeholder="Your email address" class="input bg-white/10 text-white placeholder:text-primary-200 border-primary-400 focus:ring-white flex-grow"><button class="btn bg-white text-primary-700 hover:bg-primary-50">Subscribe</button></div><p class="text-xs text-primary-200 mt-3">By subscribing, you agree to our Privacy Policy and consent to receive updates from Long Châu.</p></div><div class="hidden md:flex justify-end"><img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg" alt="Health Newsletter" class="w-48 h-48 object-cover rounded-full"></div></div></div></div></section><section class="py-12 md:py-16 bg-neutral-50"><div class="container-custom"><div class="flex justify-between items-end mb-8"><div><h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-3">Health &amp; Wellness Articles</h2><p class="text-neutral-600">Expert advice and information to help you stay healthy.</p></div><div class="hidden md:block">`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/blog",
+        class: "btn-outline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`View All Articles`);
+          } else {
+            return [
+              createTextVNode("View All Articles")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><!--[-->`);
+      ssrRenderList(articles, (article, index) => {
+        _push(ssrRenderComponent(_component_NuxtLink, {
+          key: index,
+          to: `/blog/${article.slug}`,
+          class: "card group overflow-hidden"
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              _push2(`<img${ssrRenderAttr("src", article.image)}${ssrRenderAttr("alt", article.title)} class="w-full h-48 object-cover transition-transform group-hover:scale-105"${_scopeId}><div class="p-6"${_scopeId}><p class="text-sm text-primary-600 mb-2"${_scopeId}>${ssrInterpolate(article.category)}</p><h3 class="font-semibold text-lg text-neutral-800 mb-2 group-hover:text-primary-600 transition-colors"${_scopeId}>${ssrInterpolate(article.title)}</h3><p class="text-neutral-600 mb-4 line-clamp-2"${_scopeId}>${ssrInterpolate(article.excerpt)}</p><div class="flex items-center justify-between"${_scopeId}><div class="flex items-center"${_scopeId}><img${ssrRenderAttr("src", article.authorAvatar)}${ssrRenderAttr("alt", article.author)} class="w-8 h-8 rounded-full object-cover mr-2"${_scopeId}><span class="text-sm text-neutral-600"${_scopeId}>${ssrInterpolate(article.author)}</span></div><span class="text-sm text-neutral-500"${_scopeId}>${ssrInterpolate(article.date)}</span></div></div>`);
+            } else {
+              return [
+                createVNode("img", {
+                  src: article.image,
+                  alt: article.title,
+                  class: "w-full h-48 object-cover transition-transform group-hover:scale-105"
+                }, null, 8, ["src", "alt"]),
+                createVNode("div", { class: "p-6" }, [
+                  createVNode("p", { class: "text-sm text-primary-600 mb-2" }, toDisplayString(article.category), 1),
+                  createVNode("h3", { class: "font-semibold text-lg text-neutral-800 mb-2 group-hover:text-primary-600 transition-colors" }, toDisplayString(article.title), 1),
+                  createVNode("p", { class: "text-neutral-600 mb-4 line-clamp-2" }, toDisplayString(article.excerpt), 1),
+                  createVNode("div", { class: "flex items-center justify-between" }, [
+                    createVNode("div", { class: "flex items-center" }, [
+                      createVNode("img", {
+                        src: article.authorAvatar,
+                        alt: article.author,
+                        class: "w-8 h-8 rounded-full object-cover mr-2"
+                      }, null, 8, ["src", "alt"]),
+                      createVNode("span", { class: "text-sm text-neutral-600" }, toDisplayString(article.author), 1)
+                    ]),
+                    createVNode("span", { class: "text-sm text-neutral-500" }, toDisplayString(article.date), 1)
+                  ])
+                ])
+              ];
+            }
+          }),
+          _: 2
+        }, _parent));
+      });
+      _push(`<!--]--></div><div class="text-center mt-8 md:hidden">`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/blog",
+        class: "btn-outline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`View All Articles`);
+          } else {
+            return [
+              createTextVNode("View All Articles")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></div></section></div>`);
+    };
+  }
+};
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/index.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+export {
+  _sfc_main as default
+};
+//# sourceMappingURL=index-BncJaAD_.js.map
