@@ -1,1 +1,1 @@
-export { default } from "file:///C:/Users/Admin/Desktop/longchau_pms/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+export { default } from "file:///D:/Study/Clone%20Github%20Folder/longchau_pms/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
